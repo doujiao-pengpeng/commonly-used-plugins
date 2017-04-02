@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="../../node_modules/webuploader/css/webuploader.css">
+  <script src="../../node_modules/webuploader/dist/webuploader.js"></script>
+</head>
+<body>
+  <div id="uploader">
+    <div id="thelist" class="uploader-list">
+      <div class="btns">
+        <div id="picker">
+          选择文件
+        </div>
+        <button id="ctlBtn" class="btn btn-default">开始上传</button>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  var uploader = WebUploader.create({
+    
+    swf: BASE_URL + '/js/Uploader.swf',
+    
+    server: 'http://webuploader.duapp.com/server/fileupload.php',
+    pick: '#picker',
+    // 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
+    resize: false
+  });
+</script>
+</html>
